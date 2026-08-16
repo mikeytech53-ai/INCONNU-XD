@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>INCONNU XD V2 · Link Device</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <div class="particles" id="particles"></div>
+
+  <main class="card">
+    <div class="logo-wrap">
+      <div class="logo">⚡</div>
+      <div class="logo-ring"></div>
+    </div>
+    <h1>INCONNU XD V2</h1>
+    <p class="subtitle">Link your WhatsApp in seconds — no QR needed.</p>
+
+    <div class="stats-badge" id="statsBadge">
+      <span class="stats-dot"></span>
+      <span id="statsText">Loading stats…</span>
+    </div>
+
+    <div id="step-input">
+      <label for="phone">WhatsApp number with country code</label>
+      <div class="input-row">
+        <span class="plus">+</span>
+        <input id="phone" type="tel" placeholder="2348169946429" autocomplete="off" />
+      </div>
+      <button id="pairBtn">🚀 Get Pairing Code</button>
+      <p class="hint">Digits only, no spaces or symbols. Example: 1 555 123 4567 → 15551234567</p>
+      <p id="error" class="error"></p>
+    </div>
+
+    <div id="step-code" class="hidden">
+      <p class="instructions">
+        On your phone: <b>WhatsApp → Settings → Linked Devices → Link a Device → Link with phone number instead</b>,
+        then enter this code:
+      </p>
+      <div id="code" class="code"></div>
+      <div class="status-row">
+        <span class="dot" id="statusDot"></span>
+        <span id="statusText">Waiting for link…</span>
+      </div>
+      <button id="resetBtn" class="secondary">Link a different number</button>
+    </div>
+
+    <div id="step-connected" class="hidden">
+      <div class="check">✅</div>
+      <h2>Linked!</h2>
+      <p>INCONNU XD V2 is now running for this account. Send <code>.menu</code> in any chat.</p>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-icon">🟢</div>
+          <div class="stat-label">Status</div>
+          <div class="stat-value">Online</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⏱️</div>
+          <div class="stat-label">Connected</div>
+          <div class="stat-value" id="connectedFor">just now</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🔋</div>
+          <div class="stat-label">Phone battery</div>
+          <div class="stat-value" id="batteryValue">n/a</div>
+        </div>
+      </div>
+      <p class="battery-note">WhatsApp doesn't share your phone's battery level with linked devices, so this stays n/a — everything else here is live.</p>
+
+      <button id="resetBtn2" class="secondary">Link another number</button>
+    </div>
+
+    <div class="community" id="community">
+      <p class="community-title">✨ Join the community</p>
+      <div class="community-links">
+        <a id="channelLink" class="community-btn channel" href="#" target="_blank" rel="noopener">
+          📢 Follow our Channel
+        </a>
+        <a id="groupLink" class="community-btn group" href="#" target="_blank" rel="noopener">
+          👥 Join our Group
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>Powered by INCONNU XD V2 · Baileys · Railway</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
